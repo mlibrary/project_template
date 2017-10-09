@@ -1,8 +1,8 @@
 # Compiled gems
 /pkg/
 
-# bundler config
-/.bundle/
+# bundler
+/.bundle/ruby
 /vendor/
 
 # rspec failure tracking
