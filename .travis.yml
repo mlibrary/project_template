@@ -1,5 +1,30 @@
+# This is an example travis-ci config. It should work out of the box,
+# but you may need to enable it by going to travis-ci.org.
 sudo: false
 language: ruby
 rvm:
-  - 2.4.2
-before_install: gem install bundler -v 1.15.4
+  - 2.4
+  - 2.3
+before_install: gem install bundler
+branches:
+  only:
+    - master
+    - develop
+    - /^v\d+\.\d+(\.\d+)?(-\S*)?$/
+
+# If you develop against one database and run in production
+# against another, I recommend setting up an appropriate build
+# matrix in travis.
+# See here: https://docs.travis-ci.com/user/customizing-the-build
+
+# You can also setup notifications, for example if you wanted an
+# alert in your team's slack channel if a build fails. You'll have to
+# follow the steps in the travis-ci docs to set up your own:
+# https://docs.travis-ci.com/user/notifications/#Configuring-slack-notifications
+#
+# You should encrypt any tokens you generate.
+# notifications:
+#   slack:
+#     on_success: change
+#     on_failure: always
+#     on_pull_requests: always
