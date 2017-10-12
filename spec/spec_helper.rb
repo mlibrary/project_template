@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+# Start code coverage. This must be first.
+require "simplecov"
+
 # Note: We don't require bundler or our entire project here. This allows us to
 # require only those files we need to run our tests.
 
