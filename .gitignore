@@ -43,3 +43,8 @@ tags
 *.swp
 *.swo
 
+
+# local settings
+config/settings/*.local.yml
+config/environments/*.local.yml
+
