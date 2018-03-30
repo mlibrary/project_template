@@ -1,0 +1,18 @@
+# database.yml is an example of an environment-aware config file. For more examples and some
+# explanation, see config/env-aware.yml.
+
+default: &default
+  adapter: sqlite3
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+
+development:
+  <<: *default
+  database: db/development.sqlite3
+
+test:
+  <<: *default
+  database: db/test.sqlite3
+
+production:
+  url: <%= ProjectTemplate.config.db&.url %>

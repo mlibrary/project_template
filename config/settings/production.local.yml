@@ -1,0 +1,40 @@
+# Obviously, this file should be gitignored in your source code. It is included
+# here for reference only.
+#
+# If you're using fauxpaas, then this file should be committed to your
+# faux-dev branch, which will cause it to be installed alongside your application.
+
+# Get a reference to the infrastructure.yml file installed by fauxpaas.
+<% @faux = YAML.load_file("infrastructure.yml") %>
+
+upload:
+	upload_path: /real/incoming
+	rsync_point: "someserver.umdl.umich.edu:incoming"
+	storage_path: /real/storage
+
+db:
+  url: <%= @faux["db"]["url"] %>
+
+dpn:
+  local_namespace: hathi
+  local_api_root: https://hathitrust.org/
+  staging_dir: /repo/download_temp
+  repo_dir: /repo/storage
+
+  # This last one is quite annoying:
+  # If you supply a symbol here (e.g. :resque), Ettin will convert that
+  # value into a symbol for you. However, later when we get the value from
+  # ettin in a YAML-ERB file, the YAML engine will convert the symbol _object_
+  # into nil. This is because while YAML understands the string representation
+  # of a symbol, it doesnt understand a symbol itself.
+  #
+  # Short version: Use and expect strings in your configuration files instead of
+  # doing this.
+  queue_adapter: ":resque"
+
+resque:
+  redis: <%= @faux["redis"]["1"] %>
+
+secrets:
+  secret_key_base: 2501928301thisisnotarealkey771db6be8b216a6d6badb5137dfasdfasdfaaa53a9ecce5a4cd8412584aa15fe08c2c3e9aecc92c866ade0feb9
+

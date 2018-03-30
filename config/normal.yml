@@ -1,0 +1,6 @@
+# Example configuration without using environment-aware configuration files.
+# This method is standard and recommended.
+
+upload_path: <%= ProjectTemplate.config.upload.upload_path %>
+rsync_point: <%= ProjectTemplate.config.upload.rsync_point %>
+storage_path: <%= ProjectTemplate.config.upload.storage_path %>

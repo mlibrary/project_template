@@ -1,0 +1,8 @@
+# This file is part of the machinery needed to build against multiple database
+# backends in travis for rails apps. It's not necessary if you're not doing that.
+# Most projects will likely not need to support multiple databases.
+
+test:
+  adapter: postgresql
+  database: somedb
+
