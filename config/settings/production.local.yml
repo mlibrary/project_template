@@ -8,9 +8,9 @@
 <% @faux = YAML.load_file("infrastructure.yml") %>
 
 upload:
-	upload_path: /real/incoming
-	rsync_point: "someserver.umdl.umich.edu:incoming"
-	storage_path: /real/storage
+  upload_path: /real/incoming
+  rsync_point: "someserver.umdl.umich.edu:incoming"
+  storage_path: /real/storage
 
 db:
   url: <%= @faux["db"]["url"] %>
