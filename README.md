@@ -89,8 +89,8 @@ make auto
 
 # Badges
 
-To include badges, copy the code below, adjusting the url as necessary. They provide useful
-links and status-at-a-glance.
+To include badges, copy the code below, adjusting the url as necessary. You'll need to view the
+actual file rather than the rendered version. They provide useful links and status-at-a-glance.
 
 * Travis - [![Build Status](https://travis-ci.org/mlibrary/moku.svg?branch=master)](https://travis-ci.org/mlibrary/moku?branch=master)
 * RubyDoc.info - [![API Docs](https://img.shields.io/badge/API_docs-rubydoc.info-blue.svg)](https://www.rubydoc.info/github/mlibrary/moku)
