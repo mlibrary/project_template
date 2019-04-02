@@ -17,12 +17,12 @@ LIT Developers maintain a list of recommended gems in
 
 This section briefly describes the tools in use, but does not serve as a guide for any of them.
 
-## Github
+## [Github](https://github.com/)
 
 We've standardized on using Github as the central host of our git repositories. The use of pull
 requests is highly recommended, and the other tools are configured with this practice in mind.
 
-## Travis-CI
+## [Travis-CI](https://docs.travis-ci.com/)
 
 We use travis-ci to ensure that every build is run through its test suite before being deployed.
 Travis's integration with Github allows it to automatically build pull requests, and report
@@ -32,7 +32,7 @@ integration for those teams that desire it, but we have not included it here.
 Travis will work out of the box, but configuration options are in `.travis.yml`; consult
 the official docs for more info on how to customize the builds.
 
-## Rubocop
+## [Rubocop](https://rubocop.readthedocs.io/en/latest/)
 
 Rubocop is a style linter. It is powerful and extremely configurable, and is capable of fixing
 many issues automatically. A recommended rubocop configuration is included here
@@ -48,7 +48,7 @@ travis-ci, and mark builds with issues as broken builds. It can be tempting to d
 feature, but the above-described `.rubocop_todo.yml` feature is the correct way to solve
 this problem.
 
-## Coveralls
+## [Coveralls](https://docs.coveralls.io/)
 
 Coveralls is an external service that plugs into the SimpleCov gem to monitor your project's test
 coverage. It integrates with Github to automatically analyze commits and pull requests, and will
@@ -58,7 +58,7 @@ While high test coverage is great, 100% coverage tends to fail the pareto princi
 we recommend teams include a policy of not merging commits that lower the test coverage without
 serious review.
 
-## RubyDoc.info
+## [RubyDoc.info](https://www.rubydoc.info/)
 
 RubyDoc.info is an external host for javadoc-style documentation of your project's modules,
 classes, and methods. It uses [yard](https://yardoc.org/) to build out the documentation
@@ -69,7 +69,7 @@ improve the product.
 RubyDoc.info updates automatically. You can compile and view the documentation locally
 by running `bin/yard serve`, then viewing it in a browser.
 
-## ReadTheDocs
+## [ReadTheDocs](https://readthedocs.org/)
 
 ReadTheDocs is a documentation host for those docs that are not specifically source code
 annotations. Typically, this will include high-level descriptions, workflows, reasoning,
