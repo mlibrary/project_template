@@ -80,6 +80,13 @@ and will do so automatically. You can compile and view the documentation locally
 that this will require `python` to be installed; the version from your package manager is
 sufficient.
 
+### [PlantUML](https://build-me-the-docs-please.readthedocs.io/en/latest/Using_Sphinx/UsingGraphicsAndDiagramsInSphinx.html#using-plantuml) Graphs
+
+As configured in this repository, both ReadTheDocs and the local sphinx instance can automatically
+draw graphs from text using [PlantUML](http://plantuml.com/). Note that to build this locally,
+the command `plantuml` needs to be on your path (you can change this command in `docs/conf.py`).
+
+
 ```
 cd docs
 pip install -r requirements.txt
