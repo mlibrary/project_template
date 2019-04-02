@@ -82,9 +82,15 @@ sufficient.
 
 ### [PlantUML](https://build-me-the-docs-please.readthedocs.io/en/latest/Using_Sphinx/UsingGraphicsAndDiagramsInSphinx.html#using-plantuml) Graphs
 
-As configured in this repository, both ReadTheDocs and the local sphinx instance can automatically
+Optionally, both ReadTheDocs and the local sphinx instance can automatically
 draw graphs from text using [PlantUML](http://plantuml.com/). Note that to build this locally,
 the command `plantuml` needs to be on your path (you can change this command in `docs/conf.py`).
+
+### Describing HTTP
+
+This repository is configured with the addon
+[httpdomain](https://sphinxcontrib-httpdomain.readthedocs.io) which can be used to effectively
+describe RESTful or other HTTP endpoints and APIs.
 
 
 ```

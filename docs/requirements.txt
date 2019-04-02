@@ -2,3 +2,4 @@ sphinx
 sphinx-autobuild
 guzzle_sphinx_theme
 sphinxcontrib-plantuml
+sphinxcontrib-httpdomain

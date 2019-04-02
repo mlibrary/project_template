@@ -15,7 +15,8 @@ release = u''
 extensions = [
     'guzzle_sphinx_theme',
     'sphinx.ext.coverage',
-    'sphinxcontrib.plantuml'
+    'sphinxcontrib.plantuml',
+    'sphinxcontrib.httpdomain'
 ]
 
 templates_path = ['_templates']
