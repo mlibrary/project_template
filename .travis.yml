@@ -17,14 +17,12 @@ before_install: gem install bundler
 
 script:
   - bundle exec rspec
-  - if [[ $LINT = 'true' ]]; then bin/rubocop; fi
 
 # This adds an additional 'build' that is just the rubocop run
 matrix:
   include:
     - rvm: ruby-head
-      env:
-        - LINT=true
+      script: bin/rubocop
 
 # You can also setup notifications, for example if you wanted an
 # alert in your team's slack channel if a build fails. You'll have to
@@ -77,5 +75,7 @@ script:
   - if [[ $DB = 'sqlite' ]]; then bin/rspec --tag ~broken_in_sqlite; fi
   - if [[ $DB = 'mysql' ]]; then bin/rspec; fi
   - if [[ $DB = 'postgres' ]]; then bin/rspec; fi
-  - if [[ $LINT = 'true' ]]; then bin/rubocop; fi
 
+matrix:
+  include:
+    - rvm: ruby-head
