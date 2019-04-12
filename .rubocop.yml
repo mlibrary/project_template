@@ -15,6 +15,7 @@ AllCops:
     - 'vendor/bundle/**/*'
     - '*.gemspec'
     - 'spec/support/fixtures/**/*'
+    - 'db/schema.rb'
 
 Naming/FileName:
   ExpectMatchingDefinition: true
