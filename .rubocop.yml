@@ -1,4 +1,6 @@
-require: rubocop-rspec
+require:
+  - rubocop-performance
+  - rubocop-rspec
 inherit_from: .rubocop_todo.yml
 
 AllCops:
@@ -138,9 +140,6 @@ Layout/SpaceInsideBlockBraces:
 
 Style/SymbolArray:
   EnforcedStyle: brackets
-
-Style/WhileUntilModifier:
-  MaxLineLength: 100
 
 Layout/BlockAlignment:
   EnforcedStyleAlignWith: start_of_block
