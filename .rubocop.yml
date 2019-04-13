@@ -7,6 +7,7 @@ AllCops:
   DisplayCopNames: true
   TargetRubyVersion: 2.5
   Exclude:
+    - 'bin/bundle'
     - 'bin/console'
     - 'bin/rspec'
     - 'bin/rubocop'
@@ -24,10 +25,13 @@ Naming/FileName:
     - 'lib/core_extensions/**/*'
     - 'spec/**/*'
     - 'lib/*/version.rb'
+    - 'db/**/*'
+    - 'config.ru'
 
 Style/Documentation:
   Exclude:
     - 'spec/**/*'
+    - 'db/**/*'
 
 # We disable this cop because we want to use Pathname#/
 # and this cop is not configurable at all.
@@ -42,7 +46,6 @@ Style/Alias:
   EnforcedStyle: prefer_alias_method
 
 Metrics/LineLength:
-  Max: 100
   AllowHeredoc: true
   AllowURI: true
   URISchemes:
@@ -51,6 +54,7 @@ Metrics/LineLength:
 
 Metrics/BlockLength:
   Exclude:
+    - 'spec/support/**/*.rb'
     - 'spec/**/*_spec.rb'
 
 Layout/ElseAlignment:
@@ -157,6 +161,15 @@ Performance/RedundantMerge:
 Style/WordArray:
   EnforcedStyle: brackets
 
+# This cop just adds extra work when you want to write an integration test,
+# or test something like a jbuilder view.
+RSpec/DescribeClass:
+  Enabled: false
+
+# Using let! is fine, and can be easier to manage than a before block.
+RSpec/LetSetup:
+  Enabled: false
+
 RSpec/BeEql:
   Enabled: false
 
@@ -176,8 +189,9 @@ RSpec/MultipleExpectations:
   Enabled: true
   Max: 3
 
+# Change this as needed.
 RSpec/NestedGroups:
-  Max: 2
+  Max: 3
 
 RSpec/VerifiedDoubles:
   Enabled: false
@@ -187,3 +201,15 @@ RSpec/ExampleLength:
 
 RSpec/MessageSpies:
   EnforcedStyle: receive
+
+RSpec/EmptyExampleGroup:
+  CustomIncludeMethods:
+    - it_allows
+    - it_disallows
+
+RSpec/ContextWording:
+  Prefixes:
+    - as
+    - when
+    - with
+    - without
