@@ -33,6 +33,10 @@ Style/Documentation:
     - 'spec/**/*'
     - 'db/**/*'
 
+# Enabling this cop can break rescue statements in ruby <= 2.4
+Style/RedundantBegin:
+  Enabled: false
+
 # We disable this cop because we want to use Pathname#/
 # and this cop is not configurable at all.
 Layout/SpaceAroundOperators:
