@@ -79,3 +79,4 @@ script:
 matrix:
   include:
     - rvm: ruby-head
+      script: bin/rubocop
