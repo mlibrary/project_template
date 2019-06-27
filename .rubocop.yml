@@ -221,3 +221,7 @@ RSpec/ContextWording:
     - when
     - with
     - without
+
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - 'spec/**/*.rb'
