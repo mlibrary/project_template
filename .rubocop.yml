@@ -64,7 +64,7 @@ Metrics/BlockLength:
 Layout/ElseAlignment:
   Enabled: false
 
-Layout/FirstParameterIndentation:
+Layout/IndentFirstArgument:
   EnforcedStyle: consistent
 
 Layout/AlignParameters:
@@ -108,10 +108,10 @@ Style/GuardClause:
 Style/IfUnlessModifier:
   Enabled: false
 
-Layout/IndentArray:
+Layout/IndentFirstArrayElement:
   EnforcedStyle: consistent
 
-Layout/IndentHash:
+Layout/IndentFirstHashElement:
   EnforcedStyle: consistent
 
 Layout/AlignHash:
